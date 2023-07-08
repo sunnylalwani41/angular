@@ -37,6 +37,7 @@ import { Component } from '@angular/core';
     <input #t1 type="text">
     <button (click)="clickHandler(t1.value)">Click Here</button>
     <input #num type="number" [value]="count" (change)="count=num.value">
+    <input type="number" [(ngModel)]=count>
     <h1 bind-textContent="count"></h1>
   </fieldset>
 
