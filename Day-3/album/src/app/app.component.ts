@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <nav-bar></nav-bar>
+    <navbar></navbar>
     <header></header>
-    
+    <box></box>
   `,
 
   styleUrls: ['./app.component.css']

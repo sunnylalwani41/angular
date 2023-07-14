@@ -1,0 +1,25 @@
+
+#handBurger{
+    /* border: 3px rgb(233, 136, 136) solid; */
+    width: 30px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+#handBurger>div{
+    border: 1.5px rgb(233, 136, 136) solid;
+    margin-bottom: 6px;
+    width: auto;
+}
+
+#title{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    line-height: 0%;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+fa-icon{
+    margin: 15px 10px;
+}
