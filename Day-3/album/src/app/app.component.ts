@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
     <navbar></navbar>
     <header></header>
     <box></box>
+    <box></box>
   `,
 
   styleUrls: ['./app.component.css']
