@@ -1,6 +1,6 @@
 .cart{
     display: grid;
-    width: 90%;
+    width: 83%;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     

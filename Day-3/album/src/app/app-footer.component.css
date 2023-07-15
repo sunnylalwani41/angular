@@ -1,0 +1,21 @@
+label, a{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+}
+label{
+    color: rgba(33, 37, 41, 0.75);
+}
+
+#licence{
+    display: flex;
+    width: 83%;
+    
+    
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
