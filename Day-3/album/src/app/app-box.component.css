@@ -1,13 +1,75 @@
 .cart{
     display: grid;
+    width: 90%;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    border: 1px black solid;
+    gap: 15px;
+    
+    
+    
+    margin: auto;
+    margin-bottom: 15px;
+}
+.detail{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 0px 10px 10px;
+}
+.image{
+    height: 240px;
+    text-align: center;
+    background-color:  #55595c;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+.text-button{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #212529;
+    
+}
+.button-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    
+    margin-top: -8px;
+    margin-bottom: 5px;
+}
+button{
+    padding: 10px;
+    background-color: white;
+    color: #d27818;
+    border: 1px #d27818 solid;
+}
+button:hover{
+    background-color: #d27818;
+    color: white;
+    cursor: pointer;
+}
+.button>button:first-child{
+    border-radius: 5px 0px 0px 5px;
+}
+.button>button:last-child{
+    border-radius: 0px 5px 5px 0px;
 }
             /* <div class= "detail">
                 <div class="image">Thumbnail</div>
                 <div class= "text-button">
-                    <p></p>
+                    <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class= "button-time">
                         <div class= "button">
                             <button>View</button>

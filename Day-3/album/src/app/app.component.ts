@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
     <header></header>
     <box></box>
     <box></box>
+    <box></box>
+    <footer></footer>
   `,
 
   styleUrls: ['./app.component.css']

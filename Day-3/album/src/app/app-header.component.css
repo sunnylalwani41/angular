@@ -16,7 +16,7 @@
 }
 
 button{
-    padding: 10px;
+    padding: 7px;
     padding-left: 14px;
     padding-right: 14px;
     border-radius: 5px;
@@ -28,7 +28,7 @@ button{
     cursor: pointer;
 }
 #head>div{
-    width: 320px;
+    width: 313px;
     display: flex;
     justify-content: space-between;
     margin: auto;

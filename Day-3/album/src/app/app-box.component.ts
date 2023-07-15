@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
             <div class= "detail">
                 <div class="image">Thumbnail</div>
                 <div class= "text-button">
-                    <p></p>
+                    <p>{{matter}}</p>
                     <div class= "button-time">
                         <div class= "button">
                             <button>View</button>
@@ -20,7 +20,7 @@ import { Component } from "@angular/core";
             <div class= "detail">
                 <div class="image">Thumbnail</div>
                 <div class= "text-button">
-                    <p></p>
+                    <p>{{matter}}</p>
                     <div class= "button-time">
                         <div class= "button">
                             <button>View</button>
@@ -33,7 +33,7 @@ import { Component } from "@angular/core";
             <div class= "detail">
                 <div class="image">Thumbnail</div>
                 <div class= "text-button">
-                    <p></p>
+                    <p>{{matter}}</p>
                     <div class= "button-time">
                         <div class= "button">
                             <button>View</button>
@@ -47,4 +47,7 @@ import { Component } from "@angular/core";
     `,
     styleUrls: ["./app-box.component.css"]
 })
-export class Box{}
+export class Box{
+    matter:string =  "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.";
+
+}
