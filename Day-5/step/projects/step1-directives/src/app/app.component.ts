@@ -47,6 +47,7 @@ import { Component } from '@angular/core';
       <h3>"{{" 'hello masai' "}}"</h3>
       <h3 ngNonBindable>{{ hello masai }}</h3>
     </fieldset>
+
     <fieldset>
       <legend> ngStyle Directive </legend>
       
@@ -59,7 +60,31 @@ import { Component } from '@angular/core';
       <p [ngStyle]= "{ 'color': 'darkblue', 'background-color': bgcol1 }" >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore libero fugiat molestias consequuntur pariatur accusamus soluta, nisi nemo cupiditate delectus inventore qui modi voluptatibus ex temporibus veritatis vero iusto vel!
       </p>
+      <p [ngStyle]= "{ 'background-color': rateing >2 ? 'yellow' : 'goldenrod' }" >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore libero fugiat molestias consequuntur pariatur accusamus soluta, nisi nemo cupiditate delectus inventore qui modi voluptatibus ex temporibus veritatis vero iusto vel!
+      </p>
+      <p [ngStyle]= "{ 'background-color': rateing >2 ? bgcol2 : bgcol3 }" >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore libero fugiat molestias consequuntur pariatur accusamus soluta, nisi nemo cupiditate delectus inventore qui modi voluptatibus ex temporibus veritatis vero iusto vel!
+      </p>
+      <p [ngStyle]= "{ 'background-color': rateing >2 ? 'yellow' : 'goldenrod' }" >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore libero fugiat molestias consequuntur pariatur accusamus soluta, nisi nemo cupiditate delectus inventore qui modi voluptatibus ex temporibus veritatis vero iusto vel!
+      </p>
       
+
+    </fieldset>
+    <fieldset>
+      <legend> ngClass Directive </legend>
+      
+      
+       <p [ngClass]= "{ redBox : rateing>3 }" >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore libero fugiat molestias consequuntur pariatur accusamus soluta, nisi nemo cupiditate delectus inventore qui modi voluptatibus ex temporibus veritatis vero iusto vel!
+      </p>
+      <p [ngClass]= "{ redBox : rateing>2, blueBox : rateing>4 }" >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore libero fugiat molestias consequuntur pariatur accusamus soluta, nisi nemo cupiditate delectus inventore qui modi voluptatibus ex temporibus veritatis vero iusto vel!
+      </p>
+      <p [ngClass]= "{ blueBox : rateing>0, redBox : rateing>3 }" >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore libero fugiat molestias consequuntur pariatur accusamus soluta, nisi nemo cupiditate delectus inventore qui modi voluptatibus ex temporibus veritatis vero iusto vel!
+      </p>
 
     </fieldset>
   `,
@@ -68,7 +93,20 @@ import { Component } from '@angular/core';
       font-family: arial;
       margin: 0px;
       color: goldenrod;
-    }`    
+    }
+    .redBox{
+      width: 310px;
+      font-family: arial;
+      background-color: red;
+      text-align: justify;
+    }
+    .blueBox{
+      width: 310px;
+      font-family: arial;
+      background-color: blue;
+      text-align: justify;
+    }
+    `    
   ]
 })
 export class AppComponent {
@@ -77,5 +115,6 @@ export class AppComponent {
   rateing:any=3;
   bgcol1="green";
   bgcol2="red";
+  bgcol3="darkorange";
   styleprop="width: 300px; font-family: arial; background-color: silver; margin: auto; border: 1px solid darkslategrey; padding: 10px"
 }
