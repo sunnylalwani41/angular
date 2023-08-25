@@ -13,8 +13,11 @@ import { Component } from '@angular/core';
       <!-- <ol>
         <li *ngFor="let hero of avengers">{{hero.title}}</li>
       </ol>-->
-    <table>
     
+    </fieldset>
+    <div class="container">
+      <table class="table table-striped table-hover">
+      
       <thead>
         <tr>
           <th>Sl#</th>
@@ -42,7 +45,8 @@ import { Component } from '@angular/core';
         </tr>
       </tbody>
     </table>
-    </fieldset>
+    
+    </div>
   `,
   styles: []
 })
