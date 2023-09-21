@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
     <h1> Inbuild Pipes </h1>
     <hr>
     <fieldset>
-      <legend>
-        Avengers
-      </legend>
+      
       <!--<ng-template ngFor let-hero [ngForOf]="avengers" > {{hero.title}}</ng-template>-->
       <!-- <ol>
         <li *ngFor="let hero of avengers">{{hero.title}}</li>
@@ -16,9 +14,12 @@ import { Component } from '@angular/core';
     
     </fieldset>
     <div class="container">
-      <table class="table table-striped table-hover">
+      <legend>
+        Avengers
+      </legend>
+      <table class="table table-striped table-hover table-sm">
       
-      <thead>
+      <thead class="table-dark">
         <tr>
           <th>Sl#</th>
           <th>Title</th>
@@ -33,22 +34,44 @@ import { Component } from '@angular/core';
       <tbody>
         <tr *ngFor= "let hero of heros">
           <td>{{hero.sl}}</td>
-          <td>{{hero.title}}</td>
+          <!-- <td>{{hero.title.toUpperCase().toLowerCase()}}</td> -->
+          
+          <td>{{hero.title | uppercase | lowercase | titlecase}}</td>
+          <!-- Pipe Chaining -->
           <td>
-            <img [src]="hero.poster" alt={{hero.title}}  width=60px/>
+            <img [src]="hero.poster" alt={{hero.title}}  width=40px/>
           </td>
           <td>{{hero.firstname +" "+ hero.lastname}}</td>
           <td>{{hero.city}}</td>
-          <td>{{hero.ticketprice}}</td>
-          <td>{{hero.releasedate}}</td>
-          <td>{{hero.movieslist.length}}</td>
+          <!-- <td>{{hero.ticketprice | currency : "INR" }}</td> -->
+          <!-- <td>{{hero.ticketprice | currency : "INR" : "code" }}</td> -->
+          <!-- <td>{{hero.ticketprice | currency : "INR" : true : "1.0" }}</td> -->
+          <td>{{hero.ticketprice | currency : "INR" : true : "1.0-0" }}</td>
+          
+          <!-- <td>{{hero.releasedate | date : "short" }}</td> -->
+          <!-- <td>{{hero.releasedate | date : "dd:MMM:YYYY" }}</td> -->
+          <td>{{hero.releasedate | date : "dd:MMMM:yyyy" }}</td>
+          <td>
+            <!-- <button style="width:100px">{{hero.movieslist.length}}</button>-->
+            <button class="masaibtn btn btn-primary">{{hero.movieslist.length}}</button>
+          </td>
         </tr>
       </tbody>
     </table>
     
     </div>
+    <p *ngFor="let hero of heros | keyvalue"> {{hero.key+ " "+ hero.value}} </p>
+    <p *ngFor="let hero of heros[0] | keyvalue"> {{hero.key+ " "+ hero.value}} </p>
+    <p> {{heros[0] | json}}</p>
+    <!-- It is use for debugging purpose because we know that what should be answer  -->
+    <p>B: {{5 | percent:'4.3-5'}}</p>
   `,
-  styles: []
+  styles: [
+    `.masaibtn{
+      width: 100px;
+
+    }`
+  ]
 })
 export class AppComponent {
   title = 'step2-pipes';
